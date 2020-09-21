@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  {% block title %}
+  	<title>10times - Developers</title>
+	{%endblock%}
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+ <link href="http://im.gifbt.com/css/base_developers.css" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+ <style>
+	.navbar {
+    	border-radius: 0px;
+	}
+  </style>
+ {% block page_css_external %}
+ {% endblock %}
+ {% block page_css_internal %}
+ {% endblock %}
+</head>
+<body style="background:#F0F0F0">
+{% block header%}
+  <header>
+	
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+			      </button>
+			      <a href="/">
+			    			<img src="http://im.gifbt.com/images/developer_white.png" class="text-center" style="height: 34px;margin-top: 8px;">
+			    		</a>
+			    </div>
+			    <div class="collapse navbar-collapse" id="myNavbar">
+			      <ul class="nav navbar-nav navbar-right">
+			      	<li><a href="/analytics">API Analytics</a></li>
+			        <li><a href="/#user">User</a></li>
+			        <li><a href="/#event">Event</a></li>
+			        <li><a href="/#company">Company</a></li>
+			        <li><a href="/#category">Category</a></li>
+			        <li><a href="/#city">City</a></li>
+			        <li><a href="/#country">Country</a></li>
+			        <li><a href="/#eAPP">eAPP</a></li>
+					<li><a href="/template">Templates</a></li>
+			      </ul>
+			      <!-- <ul class="nav navbar-nav navbar-right">
+			        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			      </ul> -->
+			    </div>
+			  </div>
+			</div>
+		</nav>
+
+  </header>
+{% endblock %}
+<div style="height:30px;"></div>
+	<div class="container">
+		<div class="col-md-3 col-sm-3 col-xs-12">
+		{% block leftsidebar%}
+			<div class="box menubar" style="padding-left: 20px;">
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">User<!-- <i class="fa fa-plus text-right"></i> --></h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='user'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<li><a href="/user/me">Me</a></li>
+						<li><a href="/user/send-mail">mail Send</a></li>
+						<li><a href="/user/registration">Register</a></li>
+						<li><a href="/user/connect">Connect</a></li>
+						<li><a href="/user/follow">Follow</a></li>
+						<li><a href="/user/invite">Invite</a></li>
+
+						<li><a href="/user/conversation">Send Message</a></li>
+						<li><a href="/user/connect-response">Connect Action</a></li>
+						<li><a href="/user/getpassword">Get Password Reset Mail</a></li>
+						<li><a href="/user/interest">Set User Interest</a></li>
+
+
+
+					</ul>
+				</section>
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">Event</h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='event'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<!-- <li><a href="">Add</a></li> -->
+						<li><a href="/event/detail">Detail</a></li>
+						<li><a href="/event/search">Search</a></li>
+						<li><a href="/event/going-interest-bookmark">Register to an Event</a></li>
+						<li><a href="/event/visitors">Visitors</a></li>
+						<li><a href="/event/media">Media</a></li>
+						<li><a href="/event/sponsor">Sponsor</a></li>
+						<li><a href="/event/stall-book">Book a Stall/Both</a></li>
+						<li><a href="/event/listing-follow">Listing Follow</a></li>
+						<li><a href="/event/feedback">Feedback/Rating</a></li>
+						<!-- <li><a href="/event/comments">Comments</a></li> -->
+						<li><a href="/event/speakers">Speakers</a></li>
+						<li><a href="/event/exhibitor">Exhibitor</a></li>
+						<li><a href="/event/update">Update</a></li>
+						<li><a href="/event/brand-events">List event of a brand</a></li>
+						<li><a href="/event/event-related">List related event of an event</a></li>
+						<li><a href="/event/update-attend">Update Reegistration information</a></li>
+
+						<li><a href="/event/exhibitorconnect">Connect to an exhibitor on an event</a></li>
+						<li><a href="/event/agenda-follow">Agenda Follow</a></li>
+
+<!-- 						<li><a href="/event/feedback">Feedback</a></li>
+ -->
+<!-- <a href="/event/feedback" class="site_map"><strong>/event/feedback/</strong></a> -->
+
+					</ul>
+				</section>
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">Company</h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='company'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<!-- <li><a href="">Register/Update</a></li> -->
+						<li><a href="/company/search">Search</a></li>
+						<li><a href="/company/detail">Detail</a></li>
+						<li><a href="/company/follow">Follow</a></li>
+						<li><a href="/company/contacts">Contacts</a></li>
+						<li><a href="/company/enquiry">Enquiry</a></li>
+						<li><a href="/company/connect">Connect(exhi)</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">Category</h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='category'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<!-- <li><a href="">Register/Update</a></li> -->
+						<li><a href="/category/search">Search</a></li>
+						
+					</ul>
+				</section>
+
+
+
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">City</h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='city'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<!-- <li><a href="">Register/Update</a></li> -->
+						<li><a href="/city/search">Search</a></li>
+						<li><a href="/city/nearby">Nearby Cities</a></li>
+						
+					</ul>
+				</section>
+
+
+
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">Country</h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='country'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<!-- <li><a href="">Register/Update</a></li> -->
+						<li><a href="/country/search">Search</a></li>
+						<li><a href="/country/searchIP">Search(By IP)</a></li>
+						
+					</ul>
+				</section>
+
+
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">eAPP</h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='eapp'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<!-- <li><a href="">Register/Update</a></li> -->
+						<li><a href="/eapp/notification">Notification</a></li>
+						
+					</ul>
+				</section>
+
+
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">Venue</h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='venue'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<li><a href="/venue/search">Search</a></li>
+						<li><a href="/venue/detail">Detail</a></li>
+						<li><a href="/venue/category">Category</a></li>
+						<li><a href="/venue/follow">Venue Follow</a></li>
+						
+					</ul>
+				</section>
+
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">Products</h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='product'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<li><a href="/product/search">Search</a></li>
+					</ul>
+				</section>
+
+
+
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">Others</h4>
+					<hr>
+					{%if page_param.page is defined and page_param.page=='others'%}
+					<ul class="leftmenu">
+					{%else%}
+					<ul class="leftmenu dis-non">
+					{%endif%}
+						<li><a href="/other/generate-hash">Get Encoded id of an user</a></li>
+						<li><a href="/other/keyusercheck">Check validity of key user</a></li>
+						<li><a href="/other/verify">Check validity of key user for an entity</a></li>
+						<li><a href="/other/enquiry">Send enquiry to an entity</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h4 class="menuhead" onclick="collapse_menu(this)">Transactions & Emails</h4>
+					<hr>
+					<ul class="leftmenu dis-non">
+						<li><a href="/template/templates">Templates</a></li>
+						<li><a href="/template/blocks">Blocks</a></li>
+					</ul>
+				</section>
+
+
+
+
+			</div>
+		{% endblock %}
+		</div>
+		<div class="col-md-9 col-sm-9 col-xs-12">
+			<div class="box">
+				{% block rightsidecontent%}
+				{%endblock%}
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	function collapse_menu(vari)
+	{
+		$('.leftmenu').hide('800');
+		$(vari).siblings('.leftmenu').toggle('800');
+	}
+</script>
+
+
+{% block footer%}
+<footer id="footer-wrapper1">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-1 col-sm-2"><img src="http://im.gifbt.com/images/bootlogo.png" alt="10times logo"></div>
+         <div class="col-md-1 col-sm-2"><a href="https://play.google.com/store/apps/details?id=com.tentimes" target="_blank" class="btn btn-grey"><i class="fa fa-circle fa-android"></i> Android</a></div>
+         <div class="col-md-1 col-sm-2"><a href="https://itunes.apple.com/in/app/10times/id820954054?mt=8" target="_blank" class="btn btn-grey"><i class="fa fa-apple"></i> iPhone</a></div>
+         <div class="col-md-9 col-sm-6 text-right"><a href="https://www.facebook.com/10timesonline" target="_blank" class="btn btn-grey"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/10_times" target="_blank" class="btn btn-grey"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/company/10times-events" target="_blank" class="btn btn-grey"><i class="fa fa-linkedin"></i></a><a href="https://plus.google.com/+10times/posts" target="_blank" class="btn btn-grey"><i class="fa fa-google-plus"></i></a><a href="https://www.youtube.com/channel/UCT6xh8nBLVRha6VISjfEKnA" target="_blank" class="btn btn-grey"><i class="fa fa-youtube"></i></a></div>
+      </div>
+      <hr>
+      <div class="row">
+         <div class="col-md-3 col-sm-3">
+            <ul>
+               <li><a href="http://10times.com/about">About</a></li>
+               <li><a href="http://10times.com/career">Career (Join us)</a></li>
+               <li><a href="http://10times.com/media">Media &amp; Press Releases</a></li>
+               <li><a href="http://10times.com/community/event-submission-guidelines" target="_blank">Help Center</a></li>
+               <li><a href="https://10timeshelpdesk.zendesk.com/anonymous_requests/new" target="_blank">Feedback</a></li>
+            </ul>
+         </div>
+         <div class="col-md-3 col-sm-3">
+            Products &amp; Services
+            <ul>
+               <li><a href="http://login.10times.com">oDASH (Organizer Login)</a></li>
+               <li><a href="http://10times.com/services/app">Event Apps</a></li>
+               <li><a href="http://10times.com/services">Event Promotion</a></li>
+               <li><a href="http://10times.com/widget">Widget</a></li>
+            </ul>
+         </div>
+         <div class="col-md-3 col-sm-3">
+            <br>
+            <ul>
+               <li><a href="http://login.10times.com/addevent">List your Event</a></li>
+               <li><a href="http://10times.com/success-stories">Testimonials</a></li>
+               <li><a href="http://10times.com/services">Promote Your Event</a></li>
+               <li><a href="http://10times.com/organizers">Organizers</a></li>
+            </ul>
+         </div>
+         <div class="col-md-3 col-sm-3">
+            Browse Events
+            <ul>
+               <li>All Event  - <a href="http://10times.com/events/by-country">by Country </a>| <a href="http://10times.com/events/by-industry">by Industry</a></li>
+               <li>Trade Shows - <a href="http://10times.com/tradeshows/by-country">by Country</a> | <a href="http://10times.com/tradeshows/by-industry">by Industry</a></li>
+               <li>Conferences - <a href="http://10times.com/conferences/by-country">by Country</a> | <a href="http://10times.com/conferences/by-industry">by Industry</a></li>
+               <li><a href="http://10times.com/top100">Top 100 Events</a></li>
+            </ul>
+         </div>
+      </div>
+      <hr>
+      <p> By continuing past this page, you agree to our <a href="http://10times.com/privacy-policy"><u>Terms of Service</u></a>, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. <br>© 2014-{{ "now"|date("Y") }} - Tentimes Online Private Limited. All rights reserved.</p>
+   </div>
+</footer>
+{% endblock %}
+{% block page_js_external %}
+{% endblock %}
+{% block page_js_internal %}
+{% endblock %}
+
+</body>
+</html>

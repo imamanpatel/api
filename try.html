@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="http://im.gifbt.com/css/base_developers.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="row">
+
+            <div class="col-sm-2 col-lg-2">
+                <div id="list" class="list-group">
+                    <a href="#section1" class="list-group-item list-group-item-action sidebarLink active">Introduction</a>
+                    <a href="#section2" class="list-group-item list-group-item-action sidebarLink">Payload</a>
+                    <a href="#section3" class="list-group-item list-group-item-action sidebarLink">Response</a>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-5 scroll scrollspy-example height" data-spy="scroll" data-target="#list" data-offset="0">
+
+                <h1 class="font-weight-bolder">Sample API Documentation</h1>
+
+
+
+
+                <h2 id="section1">Introduction</h2>
+                <p id="intro"></p>
+
+
+
+                <h3 id="section2">Payload</h3>
+                <table id="data"></table>
+
+
+
+
+                <h3 id="section3">Response</h3>
+                <ul>
+                    <li>
+                        <p>200 <code>OK</code> - the request was successful (some API calls may return 201 instead).</p>
+                    </li>
+                    <li>
+                        <p>201 <code>Created</code> - the request was successful and a resource was created.</p>
+                    </li>
+                    <li>
+                        <p>204 <code>No Content</code> - the request was successful but there is no representation to return (i.e. the response is empty).</p>
+                    </li>
+                    <li>
+                        <p>400 <code>Bad Request</code> - the request could not be understood or was missing required parameters.</p>
+                    </li>
+                    <li>
+                        <p>401 <code>Unauthorized</code> - authentication failed or user doesn't have permissions for requested operation.</p>
+                    </li>
+                    <li>
+                        <p>403 <code>Forbidden</code> - access denied.</p>
+                    </li>
+                    <li>
+                        <p>404 <code>Not Found</code> - resource was not found.</p>
+                    </li>
+                    <li>
+                        <p>405 <code>Method Not Allowed</code> - requested method is not supported for resource.</p>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="col-lg-5">
+
+                <div class="api">
+                    <p class="apiBox">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, sol0uta.</p>
+                    <button>Apply</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+<script src="file.js"></script>
+
+</html>

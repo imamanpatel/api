@@ -1,0 +1,231 @@
+{
+    "introduction": "Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter Search company accordingly given parameter ",
+
+    "data": [{
+
+            "name": "created",
+            "type": "date",
+            "is_mandatory": "No",
+            "description": "to get company by their creation date range(format- from,to)"
+
+        },
+
+
+        {
+            "name": "onboard_date",
+            "type": "date",
+            "is_mandatory": "No",
+            "description": "to get company by their onboarding date range(format- from,to)"
+        },
+
+
+        {
+            "name": "first_login",
+            "type": "date",
+            "is_mandatory": "No",
+            "description": "to get company by their first login date range(format- from,to)"
+        },
+
+
+        {
+            "name": "lastLogin",
+            "type": "date",
+            "is_mandatory": "No",
+            "description": "to get company by their recent login date range(format- from,to)"
+        },
+
+
+        {
+            "name": "totalvents",
+            "type": "integer/varchar",
+            "is_mandatory": "No",
+            "description": ["integer- to get companies having integer totalEvents",
+                "integer+ - to get companies having more than integer totalEvents",
+                "integer1,integer2 - to get companies having totalEvents between integer1 integer2"
+            ]
+        },
+
+
+        {
+            "name": "upcomingEvents",
+            "type": "integer/varchar",
+            "is_mandatory": "No",
+            "description": ["integer- to get companies having integer upcomingEvents",
+                "integer+ - to get companies having more than integer upcomingEvents",
+                "integer1,integer2 - to get companies having upcomingEvents between integer1 integer2"
+            ]
+        },
+
+
+        {
+            "name": "totalLeads",
+            "type": "integer/varchar",
+            "is_mandatory": "No",
+            "description": ["integer- to get companies having integer totalLeads",
+                "integer+ - to get companies having more than integer totalLeads",
+                "integer1,integer2 - to get companies having totalLeads between integer1 integer2"
+            ]
+        },
+
+
+        {
+            "name": "level",
+            "type": "integer/varchar",
+            "is_mandatory": "No",
+            "description": ["integer- to get companies having integer level",
+                "integer+ - to get companies having more than integer level",
+                "integer1,integer2 - to get companies having level between integer1 integer2"
+            ]
+        },
+
+
+        {
+            "name": "published",
+            "type": "integer",
+            "is_mandatory": "No",
+            "description": "default it wil show all(published & unpublished)"
+        },
+
+
+        {
+            "name": "sortBy",
+            "type": "varchar",
+            "is_mandatory": "No",
+            "description": ""
+        },
+
+
+        {
+            "name": "sortType",
+            "type": "varchar",
+            "is_mandatory": "No",
+            "description": ""
+        },
+
+
+        {
+            "name": "user",
+            "type": "integer",
+            "is_mandatory": "No",
+            "description": "to get list of companies a perticular user associated with"
+        },
+
+
+        {
+            "name": "pipedrive",
+            "type": "integer",
+            "is_mandatory": "No",
+            "description": ["0- companies associated with no pipedriveid",
+                "1- companies associated with pipedriveid"
+            ]
+        },
+
+
+        {
+            "name": "group",
+            "type": "varchar",
+            "is_mandatory": "No",
+            "description": ""
+        },
+
+
+        {
+            "name": "promotionType",
+            "type": "integer/varchar",
+            "is_mandatory": "No",
+            "description": "integer- to get companies having integer membership  integer+ - to get companies having more than integer membership 1+ - to get all companies having some membership"
+        },
+
+
+        {
+            "name": "event",
+            "type": "integer",
+            "is_mandatory": "No",
+            "description": "return company associated with that perticular event"
+        },
+
+
+        {
+            "name": "category",
+            "type": "varchar",
+            "is_mandatory": "No",
+            "description": "list companies by their industry"
+        },
+
+
+        {
+            "name": "product",
+            "type": "integer/varchar",
+            "is_mandatory": "No",
+            "description": "Multiple allowed seprated by comma"
+        },
+
+
+        {
+            "name": "venue",
+            "type": "varchar",
+            "is_mandatory": "No",
+            "description": "Multiple allowed seprated by comma"
+        },
+
+
+        {
+            "name": "city",
+            "type": "integer/varchar",
+            "is_mandatory": "No",
+            "description": "Multiple cities are accepted seprated by comma"
+        },
+
+
+        {
+            "name": "country",
+            "type": "varchar",
+            "is_mandatory": "No",
+            "description": "Multiple country iso are accepted seprated by comma"
+        },
+
+
+        {
+            "name": "zone",
+            "type": "varchar",
+            "is_mandatory": "No",
+            "description": "eg. asia,south africa etc."
+        },
+
+
+        {
+            "name": "type",
+            "type": "integer",
+            "is_mandatory": "No",
+            "description": ["0- all",
+                "1- Organizer",
+                "2- Exhibitor"
+            ]
+        },
+
+
+        {
+            "name": "page",
+            "type": "integer",
+            "is_mandatory": "No",
+            "description": "page no."
+        },
+
+
+        {
+            "name": "max",
+            "type": "integer",
+            "is_mandatory": "No",
+            "description": "No of results to show"
+        },
+
+
+        {
+            "name": "q",
+            "type": "varchar",
+            "is_mandatory": "No",
+            "description": "search string"
+        }
+
+    ]
+}
